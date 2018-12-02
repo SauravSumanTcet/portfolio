@@ -1,0 +1,57 @@
+<div class="top-section">
+  <div class="menu-title">
+    <p> Explore my links</p>
+  </div>
+  <ng-container *ngIf="!menuActive;else closeMenu">
+    <div class="hamburger-menu-btn" (click)="menuActive = true">
+      <i class="fa fa-bars"></i>
+    </div>
+  </ng-container>
+  <ng-template #closeMenu>
+    <div class="close-menu-btn" (click)="menuActive = false">
+      <i class="fa fa-close"></i>
+    </div>
+  </ng-template>
+</div>
+<div class="main">
+  <div class="workstation">
+    <img src="../assets/img/workstation.jpg" alt="workstation">
+  </div>
+  <div class="layer">
+    <div class="overlay"></div>
+    <ng-container *ngIf="!menuActive;else closedMenuContent">
+      <div style="margin-left:10%;color: white;">
+        <h1>My name is Saurav.</h1>
+        <h1>I work as a full stack web</h1>
+        <h1>developer based in</h1>
+        <h1> Mumbai, IN</h1>
+      </div>
+    </ng-container>
+    <ng-template #closedMenuContent>
+      <h1>...coming soon...</h1>
+    </ng-template>
+  </div>
+</div>
+<div *ngIf="!menuActive" style="        background: rgba(0,0,0,1);
+padding: 4px 2%;
+margin: 1% 5%;
+border-radius: 8px;
+width: 25%;
+color: #151;
+font-size: 0.8em;
+box-shadow: 8px 8px 30px 3px rgba(0, 0, 0, 1);">  
+  <p>
+    I develop web applications, creative layouts using front-end technologies. My main area is Angular, CSS, MEAN stack
+    and many more.
+    I have a passion for web, and I am familiar with the latest web trends.
+  </p>
+  <p>
+    Over the past 2 years I had a privilege of working for TCS, Mumbai developing web application for clients.
+  </p>
+</div>
+
+<div *ngIf="!menuActive" style="position:fixed;bottom:10px;right:10px;color:white;">
+  <h2>MEAN Stack <i style="    color: orangered;
+    font-size: 2em;
+    text-shadow: 2px -2px #078aaa;" class="fa fa-heart"></i></h2>
+</div>

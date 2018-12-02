@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Montserrat;
+    src: url(assets/font/Montserrat-Regular.otf) format("opentype");
+}
+* {
+    font-family:  'Montserrat','arial', sans-serif;
+}
+body{
+    background: rgba(196, 202, 208, 1);
+}
